@@ -1,4 +1,4 @@
-"""Conexion con postgres"""
+"""Connection, create and inserts to postgres"""
 
 import csv
 import psycopg2
@@ -6,7 +6,7 @@ from config import config
 
 
 def connect():
-    """ Conexion a la base de datos """
+    """ connection database """
     connection = None
     try:
         params = config()
@@ -35,6 +35,7 @@ def connect():
                     technicalinterviewscore INT NULL);"""
                 crsr.execute(create_table)
 
+                # Insert data
                 with open('candidates_EDA.csv', newline='', encoding="utf-8") as csv_file:
                     data = csv.reader(csv_file, delimiter=';')
                     for index, row in enumerate(data):
@@ -46,15 +47,14 @@ def connect():
                             VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s,  %s);""", row)
                         crsr.execute(insert_data)
                         connection.commit()
+                # Create a new table for candidate hired
                 create_new_table= """
                     CREATE TABLE candidates_hired AS
                     SELECT *,
                         CASE WHEN "codechallengescore" >= 7 AND "technicalinterviewscore" >= 7 THEN TRUE ELSE FALSE END AS hired
-                    FROM candidates
-                                """
+                    FROM candidates"""
                 crsr.execute(create_new_table)
                 connection.commit()
-
     except (ImportError, psycopg2.DatabaseError) as error:
         print(error)
     finally:

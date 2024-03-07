@@ -1,15 +1,17 @@
 """Connection, create and inserts to postgres"""
 
+import sys
 import csv
 import psycopg2
-from config.config import config
+sys.path.append('../config/')
+from config import configuration
 
 
 def connect():
     """ connection database """
     connection = None
     try:
-        params = config()
+        params = configuration()
         print('Connecting to the postgreSQL database ...')
         with psycopg2.connect(**params) as connection:
 

@@ -2,7 +2,7 @@
 
 import csv
 import psycopg2
-from config import config
+from config.config import config
 
 
 def connect():
@@ -48,7 +48,7 @@ def connect():
                         crsr.execute(insert_data)
                         connection.commit()
                 # Create a new table for candidate hired
-                create_new_table= """
+                create_new_table = """
                     CREATE TABLE candidates_hired AS
                     SELECT *,
                         CASE WHEN "codechallengescore" >= 7 AND "technicalinterviewscore" >= 7 THEN TRUE ELSE FALSE END AS hired

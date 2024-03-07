@@ -2,5 +2,5 @@ venv
 database.ini
 notes
 __pycache__
-.vscode
-.ipynb_checkpoints
+vscode
+ipynb_checkpoints

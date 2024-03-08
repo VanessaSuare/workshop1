@@ -15,13 +15,10 @@ def connect():
         print('Connecting to the postgreSQL database ...')
         with psycopg2.connect(**params) as connection:
 
-            # create a cursor
             with connection.cursor() as crsr:
 
-                # drop in case exist
                 crsr.execute('DROP TABLE IF EXISTS candidates')
 
-                # create table
                 create_table = """
                     CREATE TABLE IF NOT EXISTS candidates (
                     id SERIAL PRIMARY KEY,
@@ -37,8 +34,7 @@ def connect():
                     technicalinterviewscore INT NULL);"""
                 crsr.execute(create_table)
 
-                # Insert data
-                with open('candidates_EDA.csv', newline='', encoding="utf-8") as csv_file:
+                with open('../data/candidates.csv', newline='', encoding="utf-8") as csv_file:
                     data = csv.reader(csv_file, delimiter=';')
                     for index, row in enumerate(data):
                         if index == 0:
@@ -49,7 +45,7 @@ def connect():
                             VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s,  %s);""", row)
                         crsr.execute(insert_data)
                         connection.commit()
-                # Create a new table for candidate hired
+
                 create_new_table = """
                     CREATE TABLE candidates_hired AS
                     SELECT *,

@@ -12,6 +12,6 @@ def configuration(filename="database.ini", section="postgresql"):
         params = parser.items(section)
         for param in params:
             db[param[0]] = param[1]
+        return db  # Añade esta línea para devolver el diccionario completo
     else:
-        raise ValueError(f'{0} not found {1} file.'.format(section, filename))
-    return db
+        raise ImportError(f"Section '{section}' not found in the '{filename}' file")

@@ -64,6 +64,6 @@ These can be installed using pip like this:
 
 ## Visualization <a name="visualizations"></a> ###
 
-### These visualizations can be seen in the **[Dashboard](https://github.com/VanessaSuare/workshop1/blob/master/notebooks/eda_candidates_hired.ipynb)**.
+### These visualizations can be seen in the **[Dashboard](https://github.com/VanessaSuare/workshop1/blob/master/visualization/WorkshopVisualization.pdf)**.
 
 ### Also, threre is the **[Published Dashboard](https://app.powerbi.com/links/F9nN2SxsKn?ctid=693cbea0-4ef9-4254-8977-76e05cb5f556&pbi_source=linkShare)** for a better interactive experience with the dashboard and the data.

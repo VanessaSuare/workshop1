@@ -7,8 +7,9 @@ sys.path.append('../config/')
 from config import configuration
 
 
+
 def connect():
-    """ connection database """
+
     connection = None
     try:
         params = configuration()

@@ -39,6 +39,8 @@ To run the project, these are the libraries you need to have installed
 
 - sqlalchemy
 
+- psycopg2
+
 These can be installed using pip like this:
 
 <div style="background-color: #000000;font-size: 14px ;color: #FFFFFF; padding: 10px; border: 1px solid #ccc">
@@ -61,7 +63,7 @@ These can be installed using pip like this:
 
 <div style="background-color: #000000;font-size: 14px ;color: #FFFFFF; padding: 10px; border: 1px solid #ccc">
     <pre>
-        cd workshop1
+        cd workshop1/src
     </pre>
 </div>
 
@@ -69,10 +71,11 @@ These can be installed using pip like this:
 
 <div style="background-color: #000000;font-size: 14px ;color: #FFFFFF; padding: 10px; border: 1px solid #ccc">
     <pre>
-        python src/main.py
+        python main.py
     </pre>
 </div>
 
 3.  Open and run the Jupyter notebook "EDA.ipynb".
 
-4.  Finally you can see the visualization of this data in PowerBI, by opening the file WorkshopVisualization.pbix .
+4.  Finally you can see the visualization of this data in PowerBI, by opening the file WorkshopVisualization.pbix.
+

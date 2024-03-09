@@ -45,37 +45,25 @@ These can be installed using pip like this:
 
 <div style="background-color: #000000;font-size: 14px ;color: #FFFFFF; padding: 10px; border: 1px solid #ccc">
     <pre>
-        pip install <library_name>
+        pip install -r requirements.txt
     </pre>
 </div>
 
-## Proyect Execution
+ ## Explorate Data Analysis <a name="exploratory-data-analysis"></a> ##
 
-1.  Specify the location where you want to host the project, then use this command to clone the repository inside the folder:
+ _This process was carried out in **[EDA Notebook](https://github.com/VanessaSuare/workshop1/blob/master/notebooks/eda_candidates_hired.ipynb)** where the following procedures are being carried out:_
 
-<div style="background-color: #000000;font-size: 14px ;color: #FFFFFF; padding: 10px; border: 1px solid #ccc">
-    <pre>
-        git clone <url_del_repositorio>
-    </pre>
-</div>
+- Identification of the data frame structure
+- Identification of columns names
+- Identification of data types
+- Identification of null data
+- Correct the nulls values
+- Give the correct structure to the columns
+- Exploratory Data Analysis
+- Graphics and analysis
 
-1.1 Enter the project with this command (you must run this inside the folder where you are cloning the repository):
+## Visualization <a name="visualizations"></a> ###
 
-<div style="background-color: #000000;font-size: 14px ;color: #FFFFFF; padding: 10px; border: 1px solid #ccc">
-    <pre>
-        cd workshop1/src
-    </pre>
-</div>
+### These visualizations can be seen in the **[Dashboard](https://github.com/VanessaSuare/workshop1/blob/master/notebooks/eda_candidates_hired.ipynb)**.
 
-2.  Execute the file "main.py" to load the dataset from the csv file to the PostgreSQL, you can do it with this command:
-
-<div style="background-color: #000000;font-size: 14px ;color: #FFFFFF; padding: 10px; border: 1px solid #ccc">
-    <pre>
-        python main.py
-    </pre>
-</div>
-
-3.  Open and run the Jupyter notebook "EDA.ipynb".
-
-4.  Finally you can see the visualization of this data in PowerBI, by opening the file WorkshopVisualization.pbix.
-
+### Also, threre is the **[Published Dashboard](https://app.powerbi.com/links/F9nN2SxsKn?ctid=693cbea0-4ef9-4254-8977-76e05cb5f556&pbi_source=linkShare)** for a better interactive experience with the dashboard and the data.

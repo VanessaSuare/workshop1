@@ -27,6 +27,8 @@ The structure of the directories and files is as follows:
     </pre>
 </div>
 
+_Also, *[Detailed Documentation](https://github.com/VanessaSuare/workshop1/blob/master/documents/DOCUMENTATION.pdf)* is available that covers everything from data selection to the final visualizations_
+
 ## Installation Requirements
 
 To run the project, these are the libraries you need to have installed
